@@ -1,0 +1,58 @@
+###########################################
+# Syntax Coloring Map For SDL_Arduino_INA3221 V2.1
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+SDL_Arduino_INA3221	KEYWORD1
+INA3221_ConfigValues	KEYWORD1
+configRegister;      	KEYWORD1
+sampleSize;          	KEYWORD1
+busCT;               	KEYWORD1
+shuntCT;             	KEYWORD1
+opMode;              	KEYWORD1
+i2cAddr;             	KEYWORD1
+shuntResistor;       	KEYWORD1
+channelShuntResistors	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+SDL_Arduino_INA3221		KEYWORD2
+begin				KEYWORD2
+getBusVoltage_V		KEYWORD2
+getShuntVoltage_mV		KEYWORD2
+getCurrent_mA	 		KEYWORD2
+getBusVoltage_mV		KEYWORD2
+getCurrent_uA 			KEYWORD2
+getShuntVoltage_uV		KEYWORD2
+getConfigSettings		KEYWORD2
+printConfigValues		KEYWORD2
+
+###########################################
+# Constants (LITERAL1)
+###########################################
+INA3221_REG_CONFIG             LITERAL1
+INA3221_READ                   LITERAL1
+INA3221_REG_SHUNTVOLTAGE_1     LITERAL1
+INA3221_REG_BUSVOLTAGE_1       LITERAL1
+INA3221_CONFIG_RESET           LITERAL1
+INA3221_CONFIG_ENABLE_CHAN1    LITERAL1
+INA3221_CONFIG_ENABLE_CHAN2    LITERAL1
+INA3221_CONFIG_ENABLE_CHAN3    LITERAL1
+INA3221_CONFIG_AVG2            LITERAL1
+INA3221_CONFIG_AVG1            LITERAL1
+INA3221_CONFIG_AVG0            LITERAL1
+INA3221_CONFIG_VBUS_CT2        LITERAL1
+INA3221_CONFIG_VBUS_CT1        LITERAL1
+INA3221_CONFIG_VBUS_CT0        LITERAL1
+INA3221_CONFIG_VSH_CT2         LITERAL1
+INA3221_CONFIG_VSH_CT1         LITERAL1
+INA3221_CONFIG_VSH_CT0         LITERAL1
+INA3221_CONFIG_MODE_2          LITERAL1
+INA3221_CONFIG_MODE_1          LITERAL1
+INA3221_CONFIG_MODE_0          LITERAL1
+INA3221_CONFIG_SETCONFIG       LITERAL1
+INA3221_SAMPLE_NUMBERS         LITERAL1
+INA3221_CONVERSION_TIMES       LITERAL1
