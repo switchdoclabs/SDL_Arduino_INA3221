@@ -17,8 +17,11 @@ V2.1 has one incompatibility with V1 -- the #define SHUNT_RESISTOR_VALUE units a
 These methods are faster and more precise if you avoid floating point numbers:
 
   // These functions because integer arithmetic can be faster and more precise
+
   int32_t getBusVoltage_mV(int channel);
+
   int32_t getCurrent_uA(int channel);
+
   int32_t getShuntVoltage_uV(int channel);  // who cares? -- get the current directly
 
 You may set some configuration options such as the number of samples in each measurement and the conversion time for each sample.
@@ -34,8 +37,11 @@ The begin(config) operand is a 16 bit configuration register value.  It defaults
 Also in the header file are two arrays with the values available for sample size and conversion time:
 
   // available number of sampleSize  collected and averaged together for measurement 
+
   #define INA3221_SAMPLE_NUMBERS                   1, 4, 16, 64, 128, 256, 512, 1024
+
   // available conversion times for shunt and bus voltage measurement
+
   #define INA3221_CONVERSION_TIMES                 140, 204, 332, 588, 1100, 2116, 4156, 8244
 
 Each 3 bit configuration register sub-field is functionally an index 0-7 into one of these arrays.
