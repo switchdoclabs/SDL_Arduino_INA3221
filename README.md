@@ -32,6 +32,8 @@ You can also speed things up by disabling unused channels, and turning off shunt
 
 The default settings will probably limit you to capture and return all three channels no faster than every 7ms.  Then add the time for your sketch to do its work...
 
+The configuration register is documented on page 21-22, and 13-14 of the datasheet available at this link: http://pdf.datasheetarchive.com/indexerfiles/Datasheets-IS41/DSA00810318.pdf
+
 The begin(config) operand is a 16 bit configuration register value.  It defaults to INA3221_CONFIG_SETCONFIG, which is "all channels", "16 samples" per measurement, "1.1 ms/sample" conversion time.  In the header file just before INA3221_CONFIG_SETCONFIG is defined, you will find the various values which can be or'ed together.  Mix and match to create your own.
 
 Also in the header file are two arrays with the values available for sample size and conversion time:
