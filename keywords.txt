@@ -1,5 +1,5 @@
 ###########################################
-# Syntax Coloring Map For SDL_Arduino_INA3221
+# Syntax Coloring Map For SDL_Arduino_INA3221 V2.1
 ###########################################
 
 ###########################################
@@ -12,7 +12,6 @@ sampleSize;          	KEYWORD1
 busCT;               	KEYWORD1
 shuntCT;             	KEYWORD1
 opMode;              	KEYWORD1
-avail_1;             	KEYWORD1
 i2cAddr;             	KEYWORD1
 shuntResistor;       	KEYWORD1
 channelShuntResistors	KEYWORD1
