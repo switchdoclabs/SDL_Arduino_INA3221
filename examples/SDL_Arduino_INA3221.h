@@ -115,7 +115,7 @@ class SDL_Arduino_INA3221{
   void setConfigSettings(uint16_t config);
   INA3221_ConfigValues getConfigSettings();
   INA3221_ConfigValues getConfigSettings(uint16_t config);
-  void  PrintConfigValues(INA3221_ConfigValues values);
+  void  printConfigValues(INA3221_ConfigValues values);
    
  private:
   INA3221_ConfigValues global;

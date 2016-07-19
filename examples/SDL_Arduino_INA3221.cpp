@@ -269,7 +269,7 @@ INA3221_ConfigValues SDL_Arduino_INA3221::getConfigSettings(uint16_t config)
     @brief  Prints hardware configurations values in INA3221_ConfigValues struct
 */
 /**************************************************************************/
-void SDL_Arduino_INA3221::PrintConfigValues(INA3221_ConfigValues values)
+void SDL_Arduino_INA3221::printConfigValues(INA3221_ConfigValues values)
 {
   float ohms;
   Serial.print(F("\nINA3221 at I2C address x"));  Serial.print(values.i2cAddr,HEX); 
