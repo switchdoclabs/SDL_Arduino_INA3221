@@ -15,6 +15,7 @@ This fork enhances V1.1 with improved arithmetic precision and easier configurat
 V2.1 has one incompatibility with V1 -- the #define SHUNT_RESISTOR_VALUE units are changed to from ohms to milli-ohms.  The Arduino IDE with default compiler warnings will flag an existing #define SHUNT_RESISTOR_VALUE in your sketch so you can adjust it (or remove it).
 
 These methods are faster and more precise if you avoid floating point numbers:
+
   // These functions because integer arithmetic can be faster and more precise
   int32_t getBusVoltage_mV(int channel);
   int32_t getCurrent_uA(int channel);
@@ -31,10 +32,12 @@ The default settings will probably limit you to capture and return all three cha
 The begin(config) operand is a 16 bit configuration register value.  It defaults to INA3221_CONFIG_SETCONFIG, which is "all channels", "16 samples" per measurement, "1.1 ms/sample" conversion time.  In the header file just before INA3221_CONFIG_SETCONFIG is defined, you will find the various values which can be or'ed together.  Mix and match to create your own.
 
 Also in the header file are two arrays with the values available for sample size and conversion time:
-        // available number of sampleSize  collected and averaged together for measurement 
-    #define INA3221_SAMPLE_NUMBERS                   1, 4, 16, 64, 128, 256, 512, 1024
-        // available conversion times for shunt and bus voltage measurement
-    #define INA3221_CONVERSION_TIMES                 140, 204, 332, 588, 1100, 2116, 4156, 8244
+
+  // available number of sampleSize  collected and averaged together for measurement 
+  #define INA3221_SAMPLE_NUMBERS                   1, 4, 16, 64, 128, 256, 512, 1024
+  // available conversion times for shunt and bus voltage measurement
+  #define INA3221_CONVERSION_TIMES                 140, 204, 332, 588, 1100, 2116, 4156, 8244
+
 Each 3 bit configuration register sub-field is functionally an index 0-7 into one of these arrays.
 
 You can change the operating configuration on the fly using setConfigSettings(config).
