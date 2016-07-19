@@ -28,7 +28,7 @@ getBusVoltage_mV		KEYWORD2
 getCurrent_uA 			KEYWORD2
 getShuntVoltage_uV		KEYWORD2
 getConfigSettings		KEYWORD2
-PrintConfigValues		KEYWORD2
+printConfigValues		KEYWORD2
 
 ###########################################
 # Constants (LITERAL1)

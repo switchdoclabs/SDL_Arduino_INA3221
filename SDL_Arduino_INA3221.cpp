@@ -52,10 +52,8 @@ void SDL_Arduino_INA3221::begin(uint16_t config,
   if (sr2 != 0) { global.channelShuntResistors[2] = sr2; }
 
   Wire.begin();
-  
   // Set chip to known config values to start
-  wireWriteRegister(INA3221_REG_CONFIG, INA3221_CONFIG_RESET);  // POR
-  wireWriteRegister(INA3221_REG_CONFIG, config);
+  setConfigSettings(config);  
 }
 
 /**************************************************************************/
@@ -213,6 +211,17 @@ float SDL_Arduino_INA3221::getShuntVoltage_mV(int channel) {
 
 /**************************************************************************/
 /*! 
+    @brief  Send the configuration bytes
+*/
+/**************************************************************************/
+void SDL_Arduino_INA3221::setConfigSettings(uint16_t config)
+{
+  wireWriteRegister(INA3221_REG_CONFIG, INA3221_CONFIG_RESET);  // POR
+  wireWriteRegister(INA3221_REG_CONFIG, config);
+}
+
+/**************************************************************************/
+/*! 
     @brief  Returns hardware configurations values in INA3221_ConfigValues struct
 */
 /**************************************************************************/
@@ -260,7 +269,7 @@ INA3221_ConfigValues SDL_Arduino_INA3221::getConfigSettings(uint16_t config)
     @brief  Prints hardware configurations values in INA3221_ConfigValues struct
 */
 /**************************************************************************/
-void SDL_Arduino_INA3221::PrintConfigValues(INA3221_ConfigValues values)
+void SDL_Arduino_INA3221::printConfigValues(INA3221_ConfigValues values)
 {
   float ohms;
   Serial.print(F("\nINA3221 at I2C address x"));  Serial.print(values.i2cAddr,HEX); 

@@ -103,18 +103,19 @@ class SDL_Arduino_INA3221{
               int32_t shunt2 = 0,
               int32_t shunt3 = 0);
   float   getBusVoltage_V(int channel);
-  float   getShuntVoltage_mV(int channel);  // who cares?
+  float   getShuntVoltage_mV(int channel);  // who cares -- get the current directly?
   float   getCurrent_mA(int channel);
 
   // These functions because integer arithmetic can be faster and more precise
   int32_t getBusVoltage_mV(int channel);
   int32_t getCurrent_uA(int channel);
-  int32_t getShuntVoltage_uV(int channel);  // who cares?
+  int32_t getShuntVoltage_uV(int channel);  // who cares -- get the current directly?
 
-  // These functions provided for documenting operationing parameters 
+  // These functions provided for setting/obtaining/documenting operating parameters 
+  void setConfigSettings(uint16_t config);
   INA3221_ConfigValues getConfigSettings();
   INA3221_ConfigValues getConfigSettings(uint16_t config);
-  void  PrintConfigValues(INA3221_ConfigValues values);
+  void  printConfigValues(INA3221_ConfigValues values);
    
  private:
   INA3221_ConfigValues global;
