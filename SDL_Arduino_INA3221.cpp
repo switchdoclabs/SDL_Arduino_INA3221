@@ -112,8 +112,8 @@ void SDL_Arduino_INA3221::begin() {
   // Set chip to known config values to start
   INA3221SetConfig();
     
-    Serial.print("shut resistor="); Serial.println(INA3221_shuntresistor);
-        Serial.print("address="); Serial.println(INA3221_i2caddr);
+   // Serial.print("shut resistor="); Serial.println(INA3221_shuntresistor);
+       // Serial.print("address="); Serial.println(INA3221_i2caddr);
     
 }
 
