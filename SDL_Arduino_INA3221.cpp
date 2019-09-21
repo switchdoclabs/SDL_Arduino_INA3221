@@ -188,7 +188,7 @@ float SDL_Arduino_INA3221::getCurrent_mA(int channel) {
 /**************************************************************************/
 int SDL_Arduino_INA3221::getManufID()
 {
-  int16_t value;
+  uint16_t value;
   wireReadRegister(0xFE, &value);
   return value;
 
