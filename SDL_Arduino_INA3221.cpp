@@ -1,8 +1,8 @@
 //
 //   SDL_Arduino_INA3221 Library
 //   SDL_Arduino_INA3221.cpp Arduino code - runs in continuous mode
-//   Version 1.1
-//   SwitchDoc Labs   January 31, 2015
+//   Version 1.2
+//   SwitchDoc Labs   September 2019
 //
 //
 
@@ -178,4 +178,18 @@ float SDL_Arduino_INA3221::getCurrent_mA(int channel) {
     float valueDec = getShuntVoltage_mV(channel)/INA3221_shuntresistor;
   
   return valueDec;
+}
+
+
+/**************************************************************************/
+/*! 
+    @brief  Gets the Manufacturers ID
+*/
+/**************************************************************************/
+int SDL_Arduino_INA3221::getManufID()
+{
+  int16_t value;
+  wireReadRegister(0xFE, &value);
+  return value;
+
 }

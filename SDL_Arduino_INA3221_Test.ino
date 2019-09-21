@@ -1,8 +1,8 @@
 //
 //   SDL_Arduino_INA3221 Library Test Code
 //   SDL_Arduino_INA3221.cpp Arduino code - runs in continuous mode
-//   Version 1.1
-//   SwitchDoc Labs   January 31, 2015
+//   Version 1.2
+//   SwitchDoc Labs   September 2019
 //
 //
 // This was designed for SunAirPlus - Solar Power Controller - www.switchdoc.com
@@ -11,7 +11,7 @@
 
 
 #include <Wire.h>
-#include <SDL_Arduino_INA3221.h>
+#include "SDL_Arduino_INA3221.h"
 
 SDL_Arduino_INA3221 ina3221;
 
@@ -23,11 +23,16 @@ SDL_Arduino_INA3221 ina3221;
 void setup(void) 
 {
     
-  Serial.begin(57600);
+  Serial.begin(115200);
   Serial.println("SDA_Arduino_INA3221_Test");
   
   Serial.println("Measuring voltage and current with ina3221 ...");
   ina3221.begin();
+
+  Serial.print("Manufactures ID=0x");
+  int MID;
+  MID = ina3221.getManufID();
+  Serial.println(MID,HEX);
 }
 
 void loop(void) 

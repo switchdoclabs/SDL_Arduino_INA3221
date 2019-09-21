@@ -1,8 +1,8 @@
 //
 //   SDL_Arduino_INA3221 Library
 //   SDL_Arduino_INA3221.cpp Arduino code - runs in continuous mode
-//   Version 1.1
-//   SwitchDoc Labs   January 31, 2015
+//   Version 1.2
+//   SwitchDoc Labs   September 2019
 //
 //
 
@@ -80,8 +80,8 @@ class SDL_Arduino_INA3221{
   float getBusVoltage_V(int channel);
   float getShuntVoltage_mV(int channel);
   float getCurrent_mA(int channel);
+  int getManufID();
 
- private:
   uint8_t INA3221_i2caddr;
   float INA3221_shuntresistor;
 

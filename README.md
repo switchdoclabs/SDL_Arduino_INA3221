@@ -2,7 +2,7 @@ SwitchDoc Labs SDL_Arduino_INA3221 Library
 
 SwitchDoc Labs - www.switchdoc.com
 
-Version 1.1 January 31, 2015
+Version 1.2 September 2019 - Added Manufacture ID
 
 The INA3221 is Triple-Channel, High-SideMeasurement, Shunt and Bus Voltage Monitor with I2C Interface
 
